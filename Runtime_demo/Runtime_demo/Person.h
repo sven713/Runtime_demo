@@ -12,4 +12,9 @@
 
 - (void)eat; // 如果没有实现，直接崩溃
 
+- (void)eatSomething:(NSString *)something;
+
+- (void)eatMany:(NSString *)one second:(BOOL)secondThing;
+
+
 @end

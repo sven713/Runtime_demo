@@ -18,7 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     Person *person = [[Person alloc] init];
-    [person eat];
+//    [person eat];
+    
+//    [person eatSomething:@"汉堡"];
+    
+    [person eatMany:@"火锅" second:YES];
 }
 
 @end
