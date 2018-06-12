@@ -12,11 +12,11 @@
 @implementation Person
 
 + (BOOL)resolveInstanceMethod:(SEL)sel { // 通过实现这个方法避免崩溃
-//    class_addMethod(self, sel, aaaaaeat, "");
+    class_addMethod(self, sel, aaaaaeat, "");
     
 //    class_addMethod(self, sel, eatSomethingAaaa, "");
     
-    class_addMethod(self, sel, eatManyFood, "");
+//    class_addMethod(self, sel, eatManyFood, "");
     
     return [super resolveInstanceMethod:sel];
 }
@@ -33,7 +33,7 @@ void eatSomethingAaaa(id self, SEL _cmd, NSString *eatWhat){
     NSLog(@"%s,吃了%@",__func__,eatWhat);
 }
 
-/**含多个参数. 不写id self, SEL _cmd这两个隐式参数,会崩溃*/
+/**含多个参数. 不写id self, SEL _cmd这两个隐式参数,会崩溃  self:方法的调用者,_cmd:方法的编号*/
 void eatManyFood(id self, SEL _cmd, NSString *firstA, BOOL secondB){
     NSLog(@"%s 吃了%@ 还有%zd",__func__,firstA,secondB);
 }

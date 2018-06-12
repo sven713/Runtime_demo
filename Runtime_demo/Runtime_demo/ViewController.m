@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import <objc/message.h>
 
 @interface ViewController ()
 
@@ -20,9 +21,12 @@
     Person *person = [[Person alloc] init];
 //    [person eat];
     
+    objc_msgSend(person, @selector(eat)); // 跟 [person eat];等价 方法调用,底层就是objc_msgSend
+//    objc_msgSend(person, @selector(eatSomething:),@"汉堡");
 //    [person eatSomething:@"汉堡"];
     
-    [person eatMany:@"火锅" second:YES];
+//    objc_msgSend(person, @selector(eatMany:second:),@"鸡翅",YES);
+//    [person eatMany:@"火锅" second:YES];
 }
 
 @end
