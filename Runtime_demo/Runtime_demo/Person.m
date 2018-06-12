@@ -28,6 +28,8 @@ void aaaaaeat(){
 }
 
 
+// objc_msgSend(person, @selector(eatSomething:),@"汉堡"); 参数跟IMP(下面的函数指针)一一对应(对象self, 方法名_cmd, 参数)
+
 /**含参数的,需要写上隐式参数: id self, SEL _cmd(是.h定义的方法名  _cmd = "eatSomething:")*/
 void eatSomethingAaaa(id self, SEL _cmd, NSString *eatWhat){
     NSLog(@"%s,吃了%@",__func__,eatWhat);

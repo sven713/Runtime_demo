@@ -21,7 +21,7 @@
     Person *person = [[Person alloc] init];
 //    [person eat];
     
-    objc_msgSend(person, @selector(eat)); // 跟 [person eat];等价 方法调用,底层就是objc_msgSend
+    objc_msgSend(person, @selector(eat)); // 跟 [person eat];等价 方法调用,底层就是objc_msgSend 这就是OC的消息发送机制
 //    objc_msgSend(person, @selector(eatSomething:),@"汉堡");
 //    [person eatSomething:@"汉堡"];
     
